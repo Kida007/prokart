@@ -1,0 +1,57 @@
+	
+
+html{
+	height: 100% ; 
+	width: 100% ; 
+	margin: 0  ;
+	padding: 0 ; 
+}
+body {
+
+	height: 100% ; 
+	width: 100% ; 
+	margin: 0 auto ; 
+	background: url(../images/seller-back.jpg) no-repeat ; 
+	
+	background-size: cover  ; 
+	-moz-background-size: cover  ; 
+	-o-background-size: cover  ; 
+	-webkit-background-size: cover  ; 
+	  overflow: hidden;
+
+	
+}
+
+.container {
+
+	width: 500px ; 
+	height:  400px  ; 
+	background-color: rgba(0,56,107,0.8) ; 
+	text-align: center;  
+	margin : 0 auto  ;
+	margin-top: 150px ; 
+	border-radius: 4px ; 
+
+
+}
+
+.container img {
+	height: 128px ; 
+	width:  128px  ;
+	margin-top: -60px ; 
+	margin-bottom: 50px ;
+}
+
+.inputbox  {
+	font-size: 20px ; 
+	padding-left: 20px ;
+	height: 45px ; 
+	width : 300px ; 
+}
+
+.inputbox1{
+
+		font-size: 2px ; 
+
+
+}
