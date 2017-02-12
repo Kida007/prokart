@@ -1,3 +1,5 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
 <?php
 require_once('load.php') ;
   $logged = $j->checklogin() ;
@@ -10,6 +12,11 @@ require_once('load.php') ;
       header("Location: $redirect?msg=login") ;
       exit;
   }
+
+
+
+
+
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -160,9 +167,14 @@ require_once('load.php') ;
       </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/star-rating.js"></script>
     <script src="js/star-rating-2.js"></script>
+    <script src="js/cookie.js"></script>
+    <script src="js/loadpproduct.js"></script>
   </body>
 </html>

@@ -22,7 +22,7 @@ if ($_GET['action']=='logout') {
 <body>
 
 
-<div style="width: 960px; background: #fff; border: 1px solid #e4e4e4; padding: 20px; margin: 10px auto;">
+<!--<div style="width: 960px; background: #fff; border: 1px solid #e4e4e4; padding: 20px; margin: 10px auto;">
 			<?php if ( $logged == 'invalid' ) : ?>
 				<p style="background: #e49a9a; border: 1px solid #c05555; padding: 7px 10px;">
 					The username password combination you entered is incorrect. Please try again.
@@ -49,7 +49,7 @@ if ($_GET['action']=='logout') {
 						You must log in to view this content. Please log in below.
 					</p>
 			<?php endif; ?>
-	</div>
+	</div>-->
 
 
 

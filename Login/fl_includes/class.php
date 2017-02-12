@@ -154,6 +154,7 @@
 				$_SESSION['userid']=$userid ;
 
 				setcookie('Sellerlogauth[user]' , $subname , 0 , '' , '' , '' , true ) ;
+				setcookie('Hello' , $subname , 0 , '' , '' , '' , true ) ;
 				setcookie('Sellerlogauth[userid]' , $userid , 0 , '' , '' , '' , true ) ;
 
 				// finally redirecting
