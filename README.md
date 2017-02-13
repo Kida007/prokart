@@ -7,8 +7,8 @@ Programming Languages used :
 
 Seller Panel :
  * Front-End - Html,css,javascript,bootstrap
- * backend- php
- * db - mysql
+ *Backend- php
+ * Db - mysql
  
  
  Client Store Android application :
