@@ -6,9 +6,9 @@ piyush.gupta111019@gmail.com .
 Programming Languages used :
 
 Seller Panel :
- -> Front-End - Html,css,javascript,bootstrap
- -> backend- php
- -> db - mysql
+ * Front-End - Html,css,javascript,bootstrap
+ * backend- php
+ * db - mysql
  
  
  Client Store Android application :
