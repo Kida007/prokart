@@ -67,7 +67,7 @@ require_once('load.php') ;
             </li>
 
             <li>
-              <a href="addprouct.php">
+              <a href="addproduct.php">
                 <i class="fa fa-plus-square-o"></i>
                 <p>ADD PRODUCT</p>
               </a>
@@ -97,6 +97,11 @@ require_once('load.php') ;
 
         <div class="main-panel">
           <!-- using bootstrap navbar -->
+
+
+
+
+
           <nav class="navbar navbar-default navbar-fixed">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -146,18 +151,7 @@ require_once('load.php') ;
                <h1 class="text-center">Your Products</h1>
 
                <div class="row products">
-                 <div class="col-md-4">
-                   <div class="card">
-                     <p class="productname">Lenovo K3 Note </p>
-                     <p class="productavail text-success">In Stock</p>
-                     <img class="img-responsive productimage" src="images/len.png"/>
-                     <div class="pricem">
-                       <p class="price">₹13000</p>
-                       <p class="discount text-muted">20% off</p>
-                       <div class="rating"></div>
-                     </div>
-                   </div>
-                 </div>
+
                </div>
 
              </div>
