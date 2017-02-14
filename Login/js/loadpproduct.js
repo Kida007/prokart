@@ -13,6 +13,8 @@ $().ready(function(){
         console.log(data);
         $('.row').append(data) ;
         $( ".spinner" ).remove();
+        $('.lazy').Lazy();
+
       }
     });
 })

@@ -1,5 +1,7 @@
 <?php
 
+error_reporting(0);
+
 require_once('load.php') ;
 if ($_GET['action']=='logout') {
 
@@ -58,7 +60,7 @@ if ($_GET['action']=='logout') {
 		<img src="images/admin.png">
 		<form action="<?php echo $_SERVER['PHP_SELF'] ;?> " method="post" >
 
-			<h3>Flipkart Seller Login</h3>
+			<h3>Prokart Seller Login</h3>
 
 			<div class="form-input">
 				<input class="inputbox"  type="text" name="subname" placeholder="UserName"/> <br> <br>

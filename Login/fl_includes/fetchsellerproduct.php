@@ -62,7 +62,7 @@ if($_POST['productSubCategory']||$_POST['productSeller']) {
           <div class="card">
             <p class="productname">'.$product['productName'].'</p>
             <p class="productavail text-success">In Stock</p>
-            <img class="img-responsive productimage" src="images/len.png"/>
+            <img class="img-responsive productimage lazy" data-src="'.$product['productImages'].'"/>
             <div class="pricem">
               <p class="price"> ₹'.$product['productPrice'].'</p>
               <p class="discount text-muted">'.$product['productsale'].' % off</p>
