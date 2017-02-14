@@ -7,7 +7,7 @@ Programming Languages used :
 
 Seller Panel :
  * Front-End - Html,css,javascript,bootstrap
- *Backend- php
+ * Backend- php
  * Db - mysql
  
  
