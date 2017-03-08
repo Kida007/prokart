@@ -171,6 +171,8 @@ require_once('load.php') ;
     <script src="js/cookie.js"></script>
     <script src="js/loadpproduct.js"></script>
     <script type="text/javascript" src="js/jquery.lazy.js"></script>
+    <script src="js/script.js"></script>
+
 
   </body>
 </html>

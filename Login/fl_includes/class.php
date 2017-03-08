@@ -2,15 +2,12 @@
 
 
 
-
 	// THIS IS MAIN CLASS   , ALL MAJOR OPERATION ARE CARRIED OUT HERE (LOGIN LOGOUT REGISTER) ARE CALLED FROM THIS CLASS .
 
 	class seller {
 
 		// function register for creating a operating registeration .... :)
 		// All the functions in seller class are passed with redirect link
-
-
 		function register($redirect){
 
 			global $jdb  ;
@@ -188,14 +185,22 @@
 
 	function logout() {
 			//Expire our auth coookie to log the user out
+			session_start()  ;
 
-			$idout = setcookie('Sellerlogauth[userid]', '', -3600, '', '', '', true);
-			$userout = setcookie('Sellerlogauth[user]', '', -3600, '', '', '', true);
+			error_log("Logging out 1") ;
 
-			if ( $idout == true && $userout == true ) {
-				return true;
-			} else {
-				return false;
+			$idout = setcookie('Sellerlogauth[userid]', '', -3600) ;
+		  $iuout = 	setcookie('Sellerlogauth[user]', '', -3600) ;
+			session_destroy() ;
+
+			if ($idout && $iuout) {
+					error_log("Successfully logged out ");
+					return true ;
+			}
+
+			else {
+				error_log("log out unsuccessful ");
+				return false ;
 			}
 		}
 
@@ -311,6 +316,6 @@
 
 	$j = new Seller ;
 
-	//error_reporting(E_ERROR | E_WARNING | E_PARSE);
+	error_reporting(E_ERROR | E_WARNING | E_PARSE);
 
   ?>

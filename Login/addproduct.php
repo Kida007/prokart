@@ -1,15 +1,46 @@
 <?php
 require_once('load.php') ;
+
+  if ($_POST['function']) {
+
+    $function = $_POST['function'] ;
+    error_log("hello - ".$function);
+
+    switch ($function) {
+      case 'logout':
+      $logout =   $j->logout();
+      error_log("status ".$logout);
+      if($logout)
+
+      {
+        $url='/Web/Login/login.php' ;
+        header("Location: " . "http://" . $_SERVER['HTTP_HOST'] . $url);
+
+    		exit ;
+
+      }
+      break;
+    }
+
+  }
+
+
+  else {
+
+
   $logged = $j->checklogin() ;
   global $jdb ;
 
   if ($logged==false) {
-      $url='http://localhost/Web/Login/adminpanel.php' ;
+      $url='http://localhost/Web/Login/addproduct.php' ;
       $url = strtok($url, '?');
       $redirect = str_replace("addproduct.php", "login.php" , $url) ;
       header("Location: $redirect?msg=login") ;
       exit;
   }
+
+}
+
 
 
 
@@ -149,9 +180,9 @@ require_once('load.php') ;
 
               <ul class="nav navbar-nav navbar-right">
                 <li>
-                  <a href="#">
-                    Logout
-                  </a>
+                  <form action="addproduct.php" method="post">
+                    <a> <button value="logout" type="submit" name="function">Logout</button</a>
+                </form>
                 </li>
               </ul>
           </div>
@@ -270,5 +301,6 @@ require_once('load.php') ;
     <script src="js/addproduct.js"></script>
     <script src="js/noty/js/noty/packaged/jquery.noty.packaged.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
