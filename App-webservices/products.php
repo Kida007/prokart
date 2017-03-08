@@ -1,8 +1,19 @@
 <?php  
 
-  if($_GET['productSubCategory']) {
+  if($_GET['productSubCategory']||$_GET['productSeller']) {
 
-  		$productSubCategory = $_GET['productSubCategory']  ;  
+      $query = "" ; 
+
+      if ($_GET['productSubCategory']) {
+              $productSubCategory = $_GET['productSubCategory']  ;  
+              $query="SELECT productId , productName , productImages , productPrice , productsale , productavgrating from products where productSubCategory = '" . $productSubCategory  ."'"; 
+
+            }
+            else {
+              $productSeller = $_GET['productSeller'] ; 
+              $query="SELECT productId , productName , productImages , productPrice , productsale , productavgrating from products where productSeller = '" . $productSeller  ."'";               
+            }
+
 
   		// MYSQL Details  
   		$dbname = "Flipkart" ; 
@@ -10,18 +21,16 @@
   		$username = "piyush"  ;
   		$password = "piyush123" ; 
 
-  		//query 
-  		$query = "SELECT productId , productName , productImages , productPrice , productsale , productavgrating from products where productSubCategory = '" . $productSubCategory  ."'"; 
-
-  		//var_dump($query) ; 
+  		//query  
+  	
 
 
 
-
-
+        $products = array() ;
   		//connect to database
 
   		$conn  = mysql_connect($host , $username , $password) ;
+
 
 
   		if ($conn) {
@@ -37,8 +46,8 @@
 
   			if (mysql_num_rows($result)) {
 
-  				while ($product = mysql_fetch_assoc($result)) { //selecting each product                   
-  					$products = array ('product'=>$product) ;   
+  				while ($product = mysql_fetch_assoc($result)) { //selecting each product    
+            array_push($products, $product);
   				}  
 
 
