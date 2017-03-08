@@ -181,7 +181,7 @@ require_once('load.php') ;
               <ul class="nav navbar-nav navbar-right">
                 <li>
                   <form action="addproduct.php" method="post">
-                    <a> <button value="logout" type="submit" name="function">Logout</button</a>
+                     <button class="btn-blank"value="logout" type="submit" name="function"><a>Logout</a></button>
                 </form>
                 </li>
               </ul>

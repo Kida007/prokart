@@ -2,16 +2,47 @@
 
 <?php
 require_once('load.php') ;
+
+  if ($_POST['function']) {
+
+    $function = $_POST['function'] ;
+    error_log("hello - ".$function);
+
+    switch ($function) {
+      case 'logout':
+      $logout =   $j->logout();
+      error_log("status ".$logout);
+      if($logout)
+
+      {
+        $url='/Web/Login/login.php' ;
+        header("Location: " . "http://" . $_SERVER['HTTP_HOST'] . $url);
+
+    		exit ;
+
+      }
+      break;
+    }
+
+  }
+
+
+  else {
+
+
   $logged = $j->checklogin() ;
   global $jdb ;
 
   if ($logged==false) {
-      $url='http://localhost/Web/Login/adminpanel.php' ;
+      $url='http://localhost/Web/Login/addproduct.php' ;
       $url = strtok($url, '?');
       $redirect = str_replace("addproduct.php", "login.php" , $url) ;
       header("Location: $redirect?msg=login") ;
       exit;
   }
+
+}
+
 
 
 
@@ -136,9 +167,9 @@ require_once('load.php') ;
 
                   <ul class="nav navbar-nav navbar-right">
                     <li>
-                      <a href="#">
-                        Logout
-                      </a>
+                      <form action="addproduct.php" method="post">
+                         <button class="btn-blank"value="logout" type="submit" name="function"><a>Logout</a></button>
+                    </form>
                     </li>
                   </ul>
               </div>
